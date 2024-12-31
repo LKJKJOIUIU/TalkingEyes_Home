@@ -1,0 +1,309 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="TalkingEyes: Pluralistic Speech-Driven 3D Eye Gaze Animation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TalkingEyes: Pluralistic Speech-Driven 3D Eye Gaze Animation</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+  
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">TalkingEyes: Pluralistic Speech-Driven 3D Eye Gaze Animation</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              Yixiang Zhuang<sup>1</sup>,
+            </span>
+            <span class="author-block">
+              Yao Cheng<sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://chengxuan90.github.io/">Xuan Cheng</a><sup>1*</sup>
+            </span>
+            <span class="author-block">
+             Jing Liao<sup>3</sup>,
+            </span>
+            <span class="author-block">
+             Juncong Lin<sup>1</sup>,
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>School of Informatics, Xiamen University,</span>
+            <span class="author-block"><sup>2</sup>China Mobile (Hangzhou) Information Technology Co., Ltd.</span>
+          </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>3</sup>Department of Computer Science, City University of Hong Kong</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2404.12888"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/LKJKJOIUIU/TalkingEyes"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://chengxuan90.github.io/chengxuan_files/video.zip"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>HD Video</span>
+                </a>
+              </span>
+
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      
+<section class="section">
+  <div class="container is-max-desktop">
+<!--     <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+      <img src="./static/images/teaser.jpg"
+           class="interpolation-image"/>
+
+      <div class="content has-text-justified">
+        <p>
+          Fig. 1: Given a speech audio, our method can synthesize facial motion, head motion and drive a 3D Gaussian Splatting based head avatar.
+        </p>
+      </div>
+      </div>
+    </div> -->
+    
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Although significant progress has been made in the field of speech-driven 3D facial animation recently, 
+            the speech-driven animation of an indispensable facial component, eye gaze, has been overlooked by recent research. 
+            This is primarily due to the weak correlation between speech and eye gaze, as well as the scarcity of audio-gaze data, 
+            making it very challenging to generate 3D eye gaze motion from speech alone. 
+          </p>
+
+          <p>
+            In this paper, we propose a novel data-driven method which can generate diverse 3D eye gaze motions in harmony with the speech. 
+            To achieve this, we firstly construct an audio-gaze dataset that contains about 14 hours of audio-mesh sequences featuring high-quality eye gaze motion, head motion and facial motion simultaneously. 
+            The motion data is acquired by performing lightweight eye gaze fitting and face reconstruction on videos from existing audio-visual datasets. 
+          </p>
+          <p>
+            We then tailor a novel speech-to-motion translation framework in which the head motions and eye gaze motions are jointly generated from speech but are modeled in two separate latent spaces. 
+            This design stems from the physiological knowledge that the rotation range of eyeballs is less than that of head. 
+            Through mapping the speech embedding into the two latent spaces, the difficulty in modeling the weak correlation between speech and non-verbal motion is thus attenuated. 
+            Finally, our TalkingEyes, integrated with a speech-driven 3D facial motion generator, can synthesize eye gaze motion, eye blinks, head motion and facial motion collectively from speech. 
+            Extensive quantitative and qualitative evaluations demonstrate the superiority of the proposed method in generating diverse and natural 3D eye gaze motions from speech.
+          </p>
+
+          
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="content has-text-justified">
+        <p>
+          Due to video compression, the online video contains some artifacts in lip-sync. 
+          For better audio-visual experience, please download the <a href="https://chengxuan90.github.io/chengxuan_files/video.zip">high definition video</a>.
+        </p>
+        </div>
+        <div class="publication-video">
+          <iframe src="./static/videos/demo.mp4"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <!--/ Paper video. -->
+
+<!--     <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Qualitative Evaluation</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            We visually compare our method with the competitors. 
+            We illustrate six typical frames of synthesized facial animations that speak at specific syllables. 
+            Compared with the competitors, the lip movements produced by Learn2Talk are more accurately articulated with the speech signals 
+            and also more consistent with the reference.
+          </p>
+          <img src="./static/images/Qualitative Evaluation.jpg"
+           class="interpolation-image"/>
+          <p>
+            Fig. 2: Visual comparisons of sampled facial motions animated by different methods on VOCA-Test (left) and BIWI-Test-A (right).
+          </p>
+        </div>
+
+        <div class="content has-text-justified">
+          <p>
+            Fig. 3 shows the 3D reconstruction error heatmaps of the sampled frames, produced by the three methods. The per-vertex errors are color-coded on the reconstructed mesh for
+            visualization. It could be observed that, our method obtains more accurate vertices both in mouth region and upper-face region.
+          </p>
+          <img src="./static/images/heatmaps.jpg"
+           class="interpolation-image"/>
+          <p>
+            Fig. 3: 3D reconstruction error heatmaps of sampled facial motions predicted by different methods on VOCA-Test (left) and BIWI-Test-A (right).
+          </p>
+        </div>
+
+        <div class="content has-text-justified">
+          <p>
+            Fig. 4 shows the visual comparisons on other languages, including Chinese, Japanese and Korean. Although trained on English datasets, our method can generalize well to any
+            other language. This is because that our method uses the signal characteristics of the speech audio, instead of words or linguistics. From Fig. 4, it could be observed that our
+            method generates more expressive animation, with obvious movements in opening mouth, pouting and closing mouth. The comparisons on facial animations with all frames are available
+            in the supplementary material.
+          </p>
+          <img src="./static/images/different language.jpg"
+           class="interpolation-image"/>
+          <p>
+            Fig. 4: Visual comparisons of sampled facial motions predicted by different methods across languages, including Chinese, Japanese and Korean.
+          </p>
+        </div>
+
+
+      </div>
+    </div>
+
+
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Applications</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            <b>Audio-visual speech recognition</b>. The first application is to synthesize the audio-visual data for the task of the audio-visual speech recognition. We use Learn2Talk to synthesize
+            the video clips from the audios on the subset of LRS3, and then construct the labeled audio-visual corpora which can be used to train and test the audio-visual speech recognition
+            network. Such synthesized audio-visual data is valuable in labeled data augmentation and personal privacy protection.
+          </p>
+        </div>
+
+
+        <div class="content has-text-justified">
+          <p>
+            <b>Speech-driven 3DGS-based avatar animation</b>. The recent 3DGS method achieves high rendering quality for novel-view synthesis with real-time performance. 
+            Instead of training the neutral network in 3D space such as NeRF, it optimizes the discrete geometric primitives, namely 3D Gaussians. 3DGS has already been 
+            used to reconstruct the head avatar, and the human body avatar from multiple view images. The second application of our method is that, it enables the speech-driven 
+            3DGS-based head avatar. Our speech-driven 3DGS animation is well in-sync with the driving audio, and supports multiple view synthesis in each frame. 
+          </p>
+          <img src="./static/images/3DGS.jpg"
+           class="interpolation-image"/>
+          <p>
+            Fig. 5: Visualization of the sampled motions of the speech-driven 3DGS-based head avatar. In each frame, we show the FLAME
+            model generated by our method (1st row-left), and the front view (1st row-right), two side views (2nd row) of the driven avatar.
+          </p>
+        </div>
+
+
+      </div>
+    </div> -->
+    
+  </div>
+</section>
+
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>
+    @misc{zhuang2024learn2talk,
+          title={Learn2Talk: 3D Talking Face Learns from 2D Talking Face}, 
+          author={Yixiang Zhuang and Baoping Cheng and Yao Cheng and Yuntao Jin and Renshuai Liu and Chengyang Li and Xuan Cheng and Jing Liao and Juncong Lin},
+          year={2024},
+          eprint={2404.12888},
+          archivePrefix={arXiv},
+          primaryClass={cs.CV}
+    }
+      </code>
+    </pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>This website is adapted from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>, 
+            licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
